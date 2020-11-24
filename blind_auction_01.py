@@ -16,10 +16,10 @@ def auction():
   other_bidders = input('Are there other users who want to bid: Y/N ').lower()
   clear()
 
-  max_bid = max(name_and_bid, key=name_and_bid.get)
+  max_bidder = max(name_and_bid, key=name_and_bid.get)
   if other_bidders == 'n':
     # print(name_and_bid)
-    print(f'{max_bid} has the highest bid of ${name_and_bid[max_bid]}')
+    print(f'{max_bidder} has the highest bid of ${name_and_bid[max_bidder]}')
     return name_and_bid
   elif other_bidders == 'y':
     auction() # recursive function
